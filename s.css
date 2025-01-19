@@ -1,0 +1,179 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-size: 22px;
+    font-family:"nunito";
+  }
+  html{
+    scroll-behavior: smooth;
+  }
+  .logo{
+    font-size: 33px;
+    font-weight: 600;
+    color:#fff;
+  }
+  #click{
+    display:none;
+  }
+  nav{
+    height:80px;
+    background:blue;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0px 50px 0px 100px;
+  }
+  nav ul{
+    display:flex;
+    list-style:none;
+  }
+  nav ul li{
+    margin:0 5px;
+  }
+  nav ul li a{
+    color:#fff;
+    text-decoration:none;
+    font-size: 22px;
+    font-weight:500;
+    padding:8px 10px;
+    border-radius:5px;
+    transition:all 0.3s ease; 
+  }
+  nav ul li a:hover,nav ul li a:active{
+    color:blue;
+    background-color:#fff;
+  }
+  #click:checked ~ .menu-btn{
+  display:none;
+  }
+  #click:checked ~ .close-btn{
+  display:block;
+  }
+  #click ~ .menu-btn{
+  display:block;
+  }
+  #click~ .close-btn{
+  display:none;
+  }
+  @media(max-width:940px){
+  nav ul{
+    position:fixed;
+    top:80px;
+    left:-100%;
+    background:blue;
+    height:100vh;
+    width:100%;
+    display:block;
+    text-align:center;
+    transition:all 0.3s ease;
+  }
+  nav ul li{
+    margin:40px 0;
+  }
+  nav ul li a:hover,
+  nav ul li:active{
+    color:cyan;
+    background:none;
+  }
+  #click:checked ~ ul{
+    left:0%;
+  }
+  .shop:active ~ ul{
+    left:0%
+  }
+  .books{
+    display: none;
+  }
+  .image{
+    height:400px;
+    width:100%;
+  }
+  .ip{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  }  
+  @media(width>940px){
+  #click ~ .menu-btn{
+    display:none;
+  }
+  #click ~ .close-btn{
+    display:none;
+  }
+  }
+  .sentence{
+    font-size: 50px;
+    margin-left:20px;
+  }
+  .first{
+    display:flex;
+    justify-content: space-between;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  .second{
+    display:flex;
+    justify-content: space-between;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  .third{
+    display:flex;
+    justify-content: space-between;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  .final{
+    background-color: blue;
+  }
+  .fl{
+    display:flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+  }
+  footer{
+    background-color: white;
+  }
+  footer .fl a{
+    text-decoration: none;
+    background-color:blue;
+    color:white;
+    padding:20px;
+  }
+  footer .fl a:hover{
+    color:aqua;
+  }
+  .button{
+    background-color:white;
+    color:rgb(3, 168, 3);
+    padding:16px 32px;
+    text-decoration: none;
+    margin:4px 2px;
+    cursor:pointer;
+    border-color:rgb(3,168,3);
+    font-size:20px;
+  }
+  .button:hover{
+  background-color:green;
+  color:white;
+  }
+  @media (width<940px){
+    .first{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .second{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .third{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
