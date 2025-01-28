@@ -94,3 +94,45 @@
           display:none;
         }
         }
+        main{
+          display:flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items:center;
+          margin-left:70px;
+          margin-right:70px;
+        }
+        .cadre{
+          border:1px solid blue;
+          border-radius:25px;
+          color:blue;
+          padding:30px;
+          display:flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        .final{
+          background-color: blue;
+        }
+        .fl{
+          display:flex;
+          flex-direction: row;
+          justify-content:center;
+          align-items: center;
+        }
+        footer{
+          background-color: white;
+        }
+        footer .fl a{
+          text-decoration: none;
+          background-color:blue;
+          color:white;
+          padding:20px;
+        }
+        footer .fl a:hover{
+          color:aqua;
+        }
+        html{
+          scroll-behavior: smooth;
+        }
