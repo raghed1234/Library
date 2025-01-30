@@ -6,51 +6,139 @@
 body{
     font-family:'nunito' !important;
     font-size:22px;
+    background:linear-gradient(135deg,blue,aqua);
 }
-.message{
-    background-color: white;
-    color:rgb(55,0,255);
+ main{
+  display:flex;
+  flex-direction: column;
+  height:100vh;
+  justify-content: center;
+  align-items: center;
+ }
+.container{
+  max-width:700px;
+  width:100%;
+  background-color: white;
+  padding:25px 30px;
+  border-radius:5px;
+}
+.container .title{
+  font-size:25px;
+  font-weight:500;
+  position:relative;
+}
+.container .title::before{
+  content:"";
+  position:absolute;
+  height:3px;
+  width:30px;
+  background:linear-gradient(135deg,blue,aqua);
+  left:0;
+  bottom:0;
+}
+.container form .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.container form .input-box{
+  margin:20px 0 12px 0;
+  width:calc(100%/2 - 20px);
+  justify-content: space-between;
+}
+
+.container form .input-box input{
+  height:45px;
+  width:100%;
+  outline:none;
+  border:1px solid #ccc;
+  border-radius:5px;
+  padding-left:15px;
+  font-size:15px;
+  border-bottom-width:2px;
+  transition:all 0.3s ease;
+}
+.container form .input-box .msg{
+  height:45px;
+  width:200%;
+  outline:none;
+  border:1px solid #ccc;
+  border-radius:5px;
+  padding-left:15px;
+  font-size:15px;
+  border-bottom-width:2px;
+  transition:all 0.3s ease;
+
+}
+
+.container form .input-box details{
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.container form .input-box input:focus
+,.container form .input-box input:valid{
+border-color:aqua;
+}
+ form .gender-details .gender-title{
+  font-size:20px;
+  font-weight:500px;
+ }
+ form .gender-details .category{
+  display:flex;
+  width:80%;
+  margin:14px 0;
+  justify-content:space-between;
+ }
+ form .gender-details .category label{
+  display:flex;
+  align-items: center;
+ }
+ form .gender-details .category .dot{
+  height:18px;
+  width:18px;
+  background:#d9d9d9;
+  border-radius: 50px;
+  margin-right:10px;
+  border:5px solid transparent;
+  transition:all 0.3s ease;
+ }
+  #dot-1:checked ~ .category label .one,#dot-2:checked ~ .category label .two,#dot-3:checked ~ .category label .three{
+    border-color:#d9d9d9;
+    background: blue;
   }
-  .text-message{
-    margin-left: 20px;
-    font-size: 40px;
+  form input[type=radio]{
+    display: none;
   }
-  .textie{
-    margin-left: 20px;
-  }
-   form .input-box{
+   form .button{
+    height:45px;
+    margin:45px 0;
+   }
+   form .button input{
+    height:100%;
     width:100%;
-    border-width: 0 0 2px 0;
-    border-style:solid;
-    margin-top:30px;
-    position:relative;
-  }
-  form .input-box input{
-    width:100%;
-    border:none;
     outline:none;
-    font-size: 25px;
-    padding:7px 0px;
-  }
-  .big{
-    margin:20px;
-    font-size: 60px;
-  }
-  
-  .button{
-    background-color:white;
-    color:rgb(55,0,255);
-    padding:16px 32px;
-    text-decoration: none;
-    margin:4px 2px;
-    cursor:pointer;
-    border-color: rgb(55,0,255);
-    font-size:20px;
-  }
-  .button:hover{
-  background-color:rgb(55,0,255);
-  color:white;
-  }
+    color:white;
+    background:linear-gradient(135deg,blue,aqua);
+    border:none;
+    font-size:18px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+   }
+   form .button input:hover{
+    background:linear-gradient(-135deg,blue,aqua);
+   }
+   @media(max-width:300px){
+    .container{
+      max-width:100px;
+    }
+    form .user-details .input-box{
+      margin-bottom:15px;
+      width:100%;
+    }
+    form .gender-details .category{
+      width:100%
+    }
+   }
   .logo{
     font-size: 33px;
     font-weight: 600;
@@ -139,26 +227,26 @@ body{
         z-index:1;
     }
     .final{
-        background-color: blue;
-      }
-      .fl{
-        display:flex;
-        flex-direction: row;
-        justify-content:center;
-        align-items: center;
-      }
-      footer{
-        background-color: white;
-      }
-      footer .fl a{
-        text-decoration: none;
-        background-color:blue;
-        color:white;
-        padding:20px;
-      }
-      footer .fl a:hover{
-        color:aqua;
-      }
-      html{
-        scroll-behavior: smooth;
-      }
+      background-color: blue;
+    }
+    .fl{
+      display:flex;
+      flex-direction: row;
+      justify-content:center;
+      align-items: center;
+    }
+    footer{
+      background-color: white;
+    }
+    footer .fl a{
+      text-decoration: none;
+      background-color:blue;
+      color:white;
+      padding:20px;
+    }
+    footer .fl a:hover{
+      color:aqua;
+    }
+    html{
+      scroll-behavior: smooth;
+    }
